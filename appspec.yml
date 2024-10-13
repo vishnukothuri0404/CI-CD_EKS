@@ -1,9 +1,5 @@
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /home/ubuntu/myapp
-
 hooks:
   AfterInstall:
     - location: scripts/print_hello_world.sh
