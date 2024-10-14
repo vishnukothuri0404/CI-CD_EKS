@@ -6,3 +6,4 @@ sudo mv kubectl /usr/local/bin/
 echo "User: $(whoami)"
 #!/bin/bash
 /usr/local/bin/kubectl apply -f deployment.yml
+
