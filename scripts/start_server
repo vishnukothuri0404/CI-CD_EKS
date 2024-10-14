@@ -4,4 +4,5 @@ chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 
 echo "User: $(whoami)"
-kubectl apply -f Kubernetes/deployment.yml
+#!/bin/bash
+/usr/local/bin/kubectl apply -f deployment.yaml
