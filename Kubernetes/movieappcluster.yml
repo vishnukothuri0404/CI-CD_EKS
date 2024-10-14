@@ -9,17 +9,16 @@ metadata:
 nodeGroups:
   - name: movieapp-ng            # Name of the node group
     instanceType: t2.medium      # EC2 instance type for nodes
-    desiredCapacity: 1           # Desired number of nodes
-    minSize: 1                   # Minimum number of nodes
-    maxSize: 5                   # Maximum number of nodes
-    volumeSize: 40               # EBS volume size (in GB)
-    volumeType: gp2              # EBS volume type
+    desiredCapacity: 1            # Desired number of nodes
+    minSize: 1                    # Minimum number of nodes
+    maxSize: 5                    # Maximum number of nodes
+    volumeSize: 40                # EBS volume size (in GB)
+    volumeType: gp2               # EBS volume type
     ssh:
-      allow: true                # Enables SSH access
-    instancesDistribution:
-      instanceName: movieapp-eks-workernode   # Instance name for nodes
+      allow: true                 # Enables SSH access
+      publicKeyName: vishnu_mac   # Specify your SSH key here
     privateNetworking: false
-    managed: true                # Use managed nodes
+    # Removed instancesDistribution and managed fields as they are not valid here
 
 iam:
   withOIDC: true                 # Enables OIDC integration for IAM roles
@@ -28,10 +27,6 @@ iam:
 cloudWatch:
   clusterLogging:
     enableTypes: ["api", "audit", "authenticator"]
-
-iam:
-  serviceAccounts:
-    withOIDC: true
 
 vpc:
   nat:
