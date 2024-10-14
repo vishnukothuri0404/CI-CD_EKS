@@ -1,3 +1,3 @@
 #!/bin/bash
 # Add commands to stop the application, if necessary
-kubectl scale deployment nginx-deployment --replicas=0
+kubectl scale deployment movieapp --replicas=0
