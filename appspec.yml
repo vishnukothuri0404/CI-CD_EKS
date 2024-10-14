@@ -9,11 +9,11 @@ hooks:
   ApplicationStop:
     - location: scripts/app_stop.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   ApplicationStart:
     - location: scripts/app_deploy.sh
       timeout: 300
-      runas: ec2-user
-      
+      runas: root
+
 
