@@ -1,25 +1,14 @@
-
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /app
-
 hooks:
- BeforeInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
   ApplicationStop:
-    - location: scripts/app_stop.sh
+    - location: scripts/stop_server
       timeout: 300
       runas: root
-
-  ApplicationStart:
-    - location: scripts/app_deploy.sh
-      timeout: 300
-      runas: root
-
-
-
-
