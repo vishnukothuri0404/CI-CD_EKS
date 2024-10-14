@@ -1,4 +1,5 @@
 #!/bin/bash
 ls -la
+pwd
 /usr/local/bin/kubectl apply -f /home/ec2-user/MyApp/CI-CD_EKS/Kubernetes/deployment.yml
 
