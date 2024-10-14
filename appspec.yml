@@ -6,6 +6,10 @@ files:
     destination: /app
 
 hooks:
+ BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: scripts/app_stop.sh
       timeout: 300
