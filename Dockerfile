@@ -9,7 +9,7 @@ RUN apk add --no-cache git
 RUN rm -rf /usr/share/nginx/html/*
 
 # Clone the Git repository into /usr/share/nginx/html
-RUN git clone https://github.com/vishnukothuri0404/MovieApp.git /usr/share/nginx/html
+RUN git clone https://github.com/vishnukothuri0404/CI-CD_EKS.git /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
