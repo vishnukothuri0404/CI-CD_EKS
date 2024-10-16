@@ -1,5 +1,5 @@
 #!/bin/bash
-ls -la
+cd /vishnu/code_deploy
 pwd
 /usr/local/bin/kubectl apply -f Kubernetes/deployment.yml
 
