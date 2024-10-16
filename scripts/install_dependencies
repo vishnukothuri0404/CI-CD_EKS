@@ -1,4 +1,5 @@
 #!/bin/bash
+whoami
 pwd
 cd /root/CI-CD_EKS
 git pull
