@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 :root {
-  --primary-color: #000000; /* Changed to black */
-  --secondary-color: #222222; /* Dark gray */
+  --primary-color: red; /* Changed to red */
+  --secondary-color: #a00000; /* Darker shade of red */
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: var(--primary-color); /* Black background */
+  background-color: var(--primary-color); /* Red background */
   font-family: 'Poppins', sans-serif;
   margin: 0;
   color: #fff; /* Ensure text is white for readability */
@@ -20,7 +20,7 @@ header {
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
-  background-color: var(--secondary-color); /* Dark gray header */
+  background-color: var(--secondary-color); /* Darker red header */
 }
 
 .search {
@@ -51,7 +51,7 @@ main {
 .movie {
   width: 300px;
   margin: 1rem;
-  background-color: var(--secondary-color); /* Dark background for movie cards */
+  background-color: #b00000; /* A lighter red for movie cards */
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
