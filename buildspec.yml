@@ -14,13 +14,13 @@ phases:
   build:
     commands:
       - echo "Executing the Build Commands"
-      - docker build -t movieapp .
+      - docker build -t movieapp:v$CODEBUILD_BUILD_NUMBER .
 
   post_build:
     commands:
       - echo "Executing the PostBuild Commands"
-      - docker tag movieapp:latest 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:latest
-      - docker tag movieapp:latest 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:v$CODEBUILD_BUILD_NUMBER
+      - docker tag movieapp:v$CODEBUILD_BUILD_NUMBER 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:latest
+      - docker tag movieapp:v$CODEBUILD_BUILD_NUMBER 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:v$CODEBUILD_BUILD_NUMBER
       - echo "Executing the docker push commands"
       - docker push 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:latest
       - docker push 474668386920.dkr.ecr.us-east-2.amazonaws.com/movieapp:v$CODEBUILD_BUILD_NUMBER
