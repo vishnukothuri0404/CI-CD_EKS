@@ -4,3 +4,8 @@ files:
   - source: /
     destination: /vishnu/code_deploy
 
+hooks:
+  AfterInstall:
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
