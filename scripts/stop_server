@@ -1,4 +1,0 @@
-#!/bin/bash
-# Add commands to stop the application, if necessary
-/usr/local/bin/kubectl scale deployment movieapp --replicas=0
-
